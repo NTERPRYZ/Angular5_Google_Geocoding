@@ -9,17 +9,24 @@ import { HttpClient} from '@angular/common/http';
 export class AppComponent {
   title = 'app';
   address:string = '';
-  longitude:string = '';
   latitude:string = '';
+  longitude:string = '';
+
+  found:boolean;
+
   constructor(private httpClient:HttpClient){}
   onKeyUp(event:any){
-    this.address = event.target.value
+    this.address = event.target.value;
   }
   getCoordinates(){
     this.httpClient.get('https://maps.googleapis.com/maps/api/geocode/json?address=${this.address}key=AIzaSyCtcfyY33kDeveLH1QyToCneZGabjFNhfw')
     .subscribe(
       (data:any []) => {
-        console.log(data)
+        if(data.length) {
+          this.latitude = data[0].results.geometry.location.lat;
+          this.longitude = data[0].results.geometry.location.lng;
+          this.found = true;
+        }
       }
     )
   }

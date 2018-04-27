@@ -17,4 +17,10 @@
  </form>
 </div>
 
+<div *ngIf="found">
+  <span>{{latitude}}</span><br>
+  <span>{{longitude}}</span>
+
+</div>
+
 <router-outlet></router-outlet>
