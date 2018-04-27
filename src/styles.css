@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #7c3696
+}
+
+h1, h2 {
+  color: white
+}
+
+#form-div {
+  width: 800px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#address {
+  font-size: 15px;
+  width: 100%;
+  padding: 20px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#latitude {
+  background-color: #f2f2f2;
+  font-size: 15px;
+  width: 100%;
+  padding: 20px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#longitude {
+  background-color: #f2f2f2;
+  font-size: 15px;
+  width: 100%;
+  padding: 20px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.getCoordinates {
+  color: white;
+  background-color: #7c3696;
+  text-align: center;
+  padding: 10px 10px;
+  margin: 8px auto;
+  font-size: 15px;
+
+}
